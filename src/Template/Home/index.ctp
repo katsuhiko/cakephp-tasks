@@ -1,4 +1,4 @@
-<script src="https://unpkg.com/vue@2.5.17"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script>
 <style>
 [v-cloak] { display:none; }
 </style>
@@ -8,16 +8,16 @@
 <table>
     <thead>
         <tr>
-            <th>test</th>
-            <th>test</th>
-            <th>test</th>
-            <th>test</th>
-            <th>test</th>
-            <th>test</th>
-            <th>test</th>
-            <th>test</th>
-            <th>test</th>
-            <th>test</th>
+            <th>test1</th>
+            <th>test2</th>
+            <th>test3</th>
+            <th>test4</th>
+            <th>test5</th>
+            <th>test6</th>
+            <th>test7</th>
+            <th>test8</th>
+            <th>test9</th>
+            <th>test10</th>
         </tr>
     </thead>
     <tbody>
