@@ -62,7 +62,7 @@
 </div>
 
 <?php
-// データ作成
+// データ作成(Controllerから渡す情報)
 $items = [];
 for ($i = 0; $i < 2000; $i++) {
     $items[] = ['name' => substr(str_shuffle('1234567890abcdefghijklmnopqrstuvwxyz'), 0, 10)];
