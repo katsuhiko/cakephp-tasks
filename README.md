@@ -1,3 +1,31 @@
+# Sample
+
+HOST
+```bash
+git clone https://github.com/katsuhiko/cakephp-tasks.git
+cd cake-tasks
+```
+
+HOST
+```bash
+docker-compose up -d
+docker exec -it cakephp-tasks_app_1 /bin/bash
+```
+
+GUEST(app)
+```bash
+./composer.phar install
+bin/cake migrations migrate
+```
+
+HOST
+- http://localhost/
+
+HOST
+```bash
+docker-compose down
+```
+
 # CakePHP Application Skeleton
 
 [![Build Status](https://img.shields.io/travis/cakephp/app/master.svg?style=flat-square)](https://travis-ci.org/cakephp/app)
