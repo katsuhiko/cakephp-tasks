@@ -4,6 +4,7 @@ HOST
 ```bash
 git clone https://github.com/katsuhiko/cakephp-tasks.git
 cd cake-tasks
+cp app.default.php app.php
 ```
 
 HOST
