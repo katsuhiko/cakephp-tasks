@@ -62,21 +62,24 @@ class BookmarksTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
-            ->integer('id')
+            ->uuid('id')
             ->allowEmpty('id', 'create');
 
         $validator
             ->scalar('title')
             ->maxLength('title', 50)
-            ->allowEmpty('title');
+            ->requirePresence('title', 'create')
+            ->notEmpty('title');
 
         $validator
             ->scalar('description')
-            ->allowEmpty('description');
+            ->requirePresence('description', 'create')
+            ->notEmpty('description');
 
         $validator
             ->scalar('url')
-            ->allowEmpty('url');
+            ->requirePresence('url', 'create')
+            ->notEmpty('url');
 
         return $validator;
     }

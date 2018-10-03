@@ -57,13 +57,14 @@ class TagsTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
-            ->integer('id')
+            ->uuid('id')
             ->allowEmpty('id', 'create');
 
         $validator
             ->scalar('title')
             ->maxLength('title', 255)
-            ->allowEmpty('title')
+            ->requirePresence('title', 'create')
+            ->notEmpty('title')
             ->add('title', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
 
         return $validator;

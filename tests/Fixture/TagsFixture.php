@@ -17,13 +17,13 @@ class TagsFixture extends TestFixture
      */
     // @codingStandardsIgnoreStart
     public $fields = [
-        'id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
-        'title' => ['type' => 'string', 'length' => 255, 'null' => true, 'default' => null, 'collate' => 'utf8mb4_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+        'id' => ['type' => 'uuid', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
+        'title' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'utf8mb4_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         'created' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
         'modified' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
-            'title' => ['type' => 'unique', 'columns' => ['title'], 'length' => []],
+            'title_index' => ['type' => 'unique', 'columns' => ['title'], 'length' => []],
         ],
         '_options' => [
             'engine' => 'InnoDB',
@@ -41,10 +41,10 @@ class TagsFixture extends TestFixture
     {
         $this->records = [
             [
-                'id' => 1,
+                'id' => 'b8edcfef-74b3-4ada-aa95-f5f29a96d252',
                 'title' => 'Lorem ipsum dolor sit amet',
-                'created' => '2018-10-03 16:32:07',
-                'modified' => '2018-10-03 16:32:07'
+                'created' => '2018-10-03 21:53:10',
+                'modified' => '2018-10-03 21:53:10'
             ],
         ];
         parent::init();

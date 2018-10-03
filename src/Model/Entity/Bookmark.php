@@ -6,8 +6,8 @@ use Cake\ORM\Entity;
 /**
  * Bookmark Entity
  *
- * @property int $id
- * @property int $user_id
+ * @property string $id
+ * @property string $user_id
  * @property string $title
  * @property string $description
  * @property string $url

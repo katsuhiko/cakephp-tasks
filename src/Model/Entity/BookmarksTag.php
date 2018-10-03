@@ -4,17 +4,18 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * User Entity
+ * BookmarksTag Entity
  *
  * @property string $id
- * @property string $email
- * @property string $password
+ * @property string $bookmark_id
+ * @property string $tag_id
  * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime $modified
  *
- * @property \App\Model\Entity\Bookmark[] $bookmarks
+ * @property \App\Model\Entity\Bookmark $bookmark
+ * @property \App\Model\Entity\Tag $tag
  */
-class User extends Entity
+class BookmarksTag extends Entity
 {
 
     /**
@@ -27,19 +28,11 @@ class User extends Entity
      * @var array
      */
     protected $_accessible = [
-        'email' => true,
-        'password' => true,
+        'bookmark_id' => true,
+        'tag_id' => true,
         'created' => true,
         'modified' => true,
-        'bookmarks' => true
-    ];
-
-    /**
-     * Fields that are excluded from JSON versions of the entity.
-     *
-     * @var array
-     */
-    protected $_hidden = [
-        'password'
+        'bookmark' => true,
+        'tag' => true
     ];
 }

@@ -6,7 +6,7 @@ use Cake\ORM\Entity;
 /**
  * Tag Entity
  *
- * @property int $id
+ * @property string $id
  * @property string $title
  * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime $modified
