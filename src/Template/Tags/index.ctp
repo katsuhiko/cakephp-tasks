@@ -27,7 +27,7 @@
         <tbody>
             <?php foreach ($tags as $tag): ?>
             <tr>
-                <td><?= $this->Number->format($tag->id) ?></td>
+                <td><?= h($tag->id) ?></td>
                 <td><?= h($tag->title) ?></td>
                 <td><?= h($tag->created) ?></td>
                 <td><?= h($tag->modified) ?></td>
